@@ -4,36 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Student Registration</title>
 </head>
 <body>
     <h1>Student Registration</h1>
     
-    <label for="firstName">First Name:</label>
-    <input type="text" name="firstName" id="firstName"> 
+    <input type="text" name="firstName" id="firstName" placeholder="First Name"> 
     <span>*</span>
     <br><br>
 
-    <label for="lastName">Last Name:</label>
-    <input type="text" name="lastName" id="lastName">
+    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
     <span>*</span>
     <br><br>
 
-    <label for="dob">Date of Birth</label>
-    <input type="text" name="dob" id="dob">
+    <input type="text" name="dob" id="dob" placeholder="Date of Birth">
     <span>*</span>
     <br><br>
 
-    <label for="address">Address</label>
-    <input type="text" name="address" id="address">
+    <input type="text" name="address" id="address" placeholder="Address">
     <span>*</span>
     <br><br>
 
-    <label for="program">Program of Study</label>
-    <select id="program">
+    <select id="program" required>
+        <option value="">Please choose a program</option>
         <option value="CPW">Computer Programming</option>
         <option value="DED">Digital Entertainment &amp; Design</option>
     </select>
+    <span>*</span>
     <br><br>
     
     <button type="button">Register</button>

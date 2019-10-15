@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    background: slategrey;
+    color: azure;
+    border-radius: .5em;
+    padding: .5em;
+    margin-top: .2em;
+}
+
+span{
+    color: red;
+}
+
