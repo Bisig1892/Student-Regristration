@@ -14,6 +14,13 @@ function processForm() {
     displayStudent(newStudent);
     clearForm();
 }
+function clearForm() {
+    var allTextBoxes = document.querySelectorAll('input[type=text]');
+    for (var i = 0; i > allTextBoxes.length; i++) {
+        var currBox = allTextBoxes[i];
+        currBox.value = '';
+    }
+}
 function displayStudent(s) {
     var newItem = document.createElement('li');
     newItem.innerText = s.firstName + '' + s.lastName;

@@ -32,6 +32,15 @@ function processForm() {
     clearForm();
 }
 
+function clearForm() {
+    let allTextBoxes = document.querySelectorAll('input[type=text]');
+    
+    for(let i = 0; i > allTextBoxes.length; i++) {
+        let currBox = <HTMLInputElement>allTextBoxes[i];
+        currBox.value = '';
+    }
+}
+
 function displayStudent(s:Student):void{ 
     // Create <li>
     let newItem = document.createElement('li');
