@@ -24,6 +24,11 @@ class Student {
      * Program of study 
      */
     program:string;
+
+    // constructor(fName, lName) {
+    //     this.firstName = fName;
+    //     this.lastName = lName;
+    // }
 }
 
 function processForm() {
@@ -44,7 +49,7 @@ function clearForm() {
 function displayStudent(s:Student):void{ 
     // Create <li>
     let newItem = document.createElement('li');
-    newItem.innerText = s.firstName + '' + s.lastName;
+    newItem.innerText = s.firstName + ' ' + s.lastName;
     let displaySelection = document.querySelector('#student-list');
     let list = displaySelection.querySelector('ul');
     // Embed student data in <li>
@@ -69,16 +74,16 @@ function showStudentData() {
 }
 
 function getStudentFromForm():Student {
-    let newStudent = new Student();
-    newStudent.firstName = getInputValue('first-name');
-    newStudent.lastName = getInputValue('last-name');
-    newStudent.dateOfBirth = new Date(getInputValue('dob'));
-    newStudent.address = getInputValue('address');
-    newStudent.program = getInputValue('program');
-    console.log(newStudent);
-    return newStudent;
+    let newStu = new Student();
+    newStu.firstName = getInputValue('firstName');
+    newStu.lastName = getInputValue('lastName');
+    newStu.dateOfBirth = new Date(getInputValue('dob'));
+    newStu.address = getInputValue('address');
+    newStu.program = getInputValue('program');
+    console.log(newStu);
+    return newStu;
 }
 
 function getInputValue(id:string):string {
-    return (<HTMLInputElement>document.getElementById('id')).value
+    return (<HTMLInputElement>document.getElementById(id)).value;
 }

@@ -23,7 +23,7 @@ function clearForm() {
 }
 function displayStudent(s) {
     var newItem = document.createElement('li');
-    newItem.innerText = s.firstName + '' + s.lastName;
+    newItem.innerText = s.firstName + ' ' + s.lastName;
     var displaySelection = document.querySelector('#student-list');
     var list = displaySelection.querySelector('ul');
     newItem.setAttribute(programAttr, s.program);
@@ -40,15 +40,15 @@ function showStudentData() {
     document.querySelector('#display > p').innerHTML = name + ' is studying ' + program;
 }
 function getStudentFromForm() {
-    var newStudent = new Student();
-    newStudent.firstName = getInputValue('first-name');
-    newStudent.lastName = getInputValue('last-name');
-    newStudent.dateOfBirth = new Date(getInputValue('dob'));
-    newStudent.address = getInputValue('address');
-    newStudent.program = getInputValue('program');
-    console.log(newStudent);
-    return newStudent;
+    var newStu = new Student();
+    newStu.firstName = getInputValue('firstName');
+    newStu.lastName = getInputValue('lastName');
+    newStu.dateOfBirth = new Date(getInputValue('dob'));
+    newStu.address = getInputValue('address');
+    newStu.program = getInputValue('program');
+    console.log(newStu);
+    return newStu;
 }
 function getInputValue(id) {
-    return document.getElementById('id').value;
+    return document.getElementById(id).value;
 }
